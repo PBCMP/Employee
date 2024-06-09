@@ -32,6 +32,7 @@
             width: 300px;
             text-align: center;
             margin-top: 20px;
+            border: 2px solid #333; /* Add this line to add a border */
         }
 
         .card h2 {
@@ -39,15 +40,26 @@
             font-size: 24px;
         }
 
-        .card p {
-            margin: 8px 0;
+        .card .details {
+            text-align: left;
             font-size: 18px;
             color: #333;
+            margin-top: 20px;
         }
 
-        .card .title {
+        .card .details .title {
             font-weight: bold;
             color: #555;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card .details .title span {
+            flex: 1;
+        }
+
+        .card .details .title span:first-child {
+            flex: 0 0 100px;
         }
     </style>
 </head>
@@ -58,10 +70,12 @@
     <div class="card">
         <img src="Images/Aniket.JPG" alt="Employee Photo" style="width: 100px; height: 100px; border-radius: 50%;">
         <h2>ANIKET ANAND</h2>
-        <p class="title">Employee ID: 12345</p>
-        <p class="title">VTC: VTC-67890</p>
-        <p class="title">IME: IME-12345</p>
-        <p class="title">AUTHO: AUTH-98765</p>
+        <div class="details">
+            <div class="title"><span> &nbsp; &nbsp; &nbsp; Emp. ID</span><span> &nbsp; : 12345</span></div>
+            <div class="title"><span> &nbsp; &nbsp; &nbsp; VTC</span><span> &nbsp; : VTC-67890</span></div>
+            <div class="title"><span> &nbsp; &nbsp; &nbsp; IME</span><span> &nbsp; : IME-12345</span></div>
+            <div class="title"><span> &nbsp; &nbsp; &nbsp; AUTHO</span><span> &nbsp; : AUTH-98765</span></div>
+        </div>
     </div>
 </body>
 </html>
